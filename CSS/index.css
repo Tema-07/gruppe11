@@ -1,0 +1,380 @@
+html {
+  scroll-behavior: smooth;
+  --lyserød: #f6e5e3;
+  --koral: #ce4942;
+  --mørkerød: #73140c;
+  --sort: #000000;
+}
+
+@font-face {
+  font-family: "Arsenica Trial", serif;
+  src: url("../fonts/ArsenicaTrial-Demibold.woff2") format("woff2"), url("../fonts/ArsenicaTrial-Demibold.ttf") format("ttf");
+}
+
+/* Hero sektion */
+
+.container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  height: 500px;
+  width: 100%;
+}
+.box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--koral);
+  color: var(--lyserød);
+  font-size: 6em;
+  font-weight: 600;
+  font-family: "Arsenica Trial", serif;
+  font-style: italic;
+
+  transition: background-color 0.5s ease;
+  overflow: hidden;
+}
+.box:nth-child(2) {
+  background-color: var(--lyserød);
+  background-image: url(../img/Glow_photo_hero.webp);
+  background-size: cover;
+  background-position: center;
+  color: #c8544d;
+}
+
+.box:nth-child(1),
+.box:nth-child(2),
+.box:nth-child(3) {
+  border-right: 1px solid var(--lyserød);
+}
+
+.box:nth-child(1),
+.box:nth-child(3) {
+  padding-bottom: 125px;
+}
+
+.box:nth-child(2),
+.box:nth-child(4) {
+  padding-top: 125px;
+}
+
+.box:hover {
+  background-color: transparent;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  height: 500px;
+  width: 100%;
+}
+.box {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--koral);
+  color: var(--lyserød);
+  font-size: 6em;
+  font-weight: 600;
+  font-family: "Arsenica Trial", serif;
+  font-style: italic;
+  transition: background-color 0.5s ease;
+  overflow: hidden;
+}
+.box:hover {
+  background-color: transparent;
+  color: var(--koral);
+  transition: 0.5s ease;
+}
+.box:nth-child(1)::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("../img/Glow_photo_fragrances.webp");
+  background-size: cover;
+  background-position: center;
+  opacity: 0;
+  text-decoration-color: var(--koral);
+  transition: opacity 0.5s ease;
+  z-index: -1;
+}
+.box:nth-child(2)::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("../img/Glow_photo_hero.webp");
+  background-size: cover;
+  background-position: center;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+  z-index: -1;
+}
+.box:nth-child(3)::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("../img/Glow_photo_makeup.webp");
+  background-size: cover;
+  background-position: center;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+  z-index: -1;
+}
+.box:nth-child(4)::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("../img/Glow_photo_skincare.webp");
+  background-size: cover;
+  background-position: center;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+  z-index: -1;
+}
+
+.box:hover::after {
+  opacity: 1;
+}
+
+/* Hero sektion */
+
+/* Editors Pick Gitter */
+
+.editors_pick_title {
+  text-align: center;
+  margin: 20px;
+  font-weight: bold;
+  font-family: "Bodoni 72 Oldstyle", "Playfair Display", "Times New Roman", Times, serif;
+  font-style: italic;
+  color: var(--koral);
+  font-size: 2em;
+  padding-top: 40px;
+}
+
+.editors_pick {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+  max-width: 1200px;
+  margin: 40px auto;
+  padding: 10px;
+  background-color: var(--lyserød);
+}
+.smallProduct {
+  background-color: var(--lyserød);
+  text-align: center;
+  padding: 20px;
+  /* min-height: 500px; */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+.smallProduct img {
+  background-color: white;
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  margin-bottom: 10px;
+}
+.smallProduct h3 {
+  font-style: italic;
+  color: var(--koral);
+  margin: 10px 0;
+}
+
+.smallProduct p {
+  color: var(--mørkerød);
+  margin: 5px 0;
+}
+.price {
+  font-weight: bold;
+  color: var(--mørkerød);
+}
+
+.onSale {
+  position: relative;
+}
+
+.onSale p.price {
+  color: var(--mørkerød);
+  font-weight: 400;
+}
+
+/* Rediger rabat-badge til at vise procent */
+.onSale .discount {
+  font-family: "Baskerville Display BT", serif;
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background-color: var(--mørkerød);
+  color: var(--lyserød);
+  padding: 5px 10px;
+  font-size: 0.9rem;
+  text-align: center;
+}
+
+/* Markering for udsolgte produkter */
+
+.soldOut {
+  position: relative;
+  opacity: 0.5;
+  pointer-events: none;
+}
+
+.soldOut::after {
+  content: "Udsolgt";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: black;
+  padding: 10px 15px;
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.saleLabel {
+  /* position: absolute; */
+  visibility: hidden;
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background-color: var(--mørkerød);
+  color: var(--lyserød);
+  padding: 5px 10px;
+  font-size: 0.9rem;
+  font-weight: bold;
+  border-radius: 3px;
+  text-align: center;
+}
+
+.isOnSale {
+  visibility: visible;
+}
+
+.product_container {
+  position: relative;
+}
+
+/* Editors Pick Gitter */
+
+/* Kategori sektioner */
+
+.left_section {
+  display: grid;
+  background-color: var(--mørkerød);
+  grid-template-columns: 1fr 2fr;
+  color: var(--lyserød);
+  text-align: left;
+  align-items: center;
+  justify-content: center;
+  padding: 30px 60px;
+  box-sizing: border-box;
+}
+
+.left_section2 {
+  display: grid;
+  background-color: var(--lyserød);
+  grid-template-columns: 1fr 2fr;
+  color: var(--koral);
+  text-align: left;
+  align-items: center;
+  justify-content: center;
+  padding: 30px 0px;
+  box-sizing: border-box;
+}
+
+.right_section {
+  display: grid;
+  background-color: var(--koral);
+  grid-template-columns: 2fr 1fr;
+  color: var(--lyserød);
+  text-align: right;
+  align-items: center;
+  justify-content: center;
+  padding: 30px 0px;
+  box-sizing: border-box;
+}
+
+.left_section h2,
+.right_section h2,
+.left_section2 h2 {
+  margin-bottom: 20px;
+  font-size: 2rem;
+  font-weight: 200;
+}
+
+.left_section p,
+.right_section p,
+.left_section2 p {
+  margin-bottom: 20px;
+  font-size: 1rem;
+  font-weight: 200;
+}
+
+.left_section div,
+.right_section div,
+.left_section2 div {
+  padding: 24px 24px;
+}
+
+.left_section img {
+  width: 100%;
+}
+
+.right_section img {
+  width: 100%;
+}
+
+.left_section2 img {
+  width: 100%;
+}
+
+.read-more-button {
+  background-color: transparent;
+  color: var(--lyserød);
+  border: 1px solid var(--lyserød);
+  padding: 10px 20px;
+  font-size: 1.2em;
+  cursor: pointer;
+  font-family: "Futura PT";
+  font-weight: 200;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.read-more-button:hover {
+  background-color: var(--lyserød);
+  color: #6b0f0f;
+}
+
+.read-more-button_inverted {
+  background-color: transparent;
+  color: var(--mørkerød);
+  border: 1px solid var(--mørkerød);
+  padding: 10px 20px;
+  font-size: 1.2em;
+  cursor: pointer;
+  font-family: "Futura PT";
+  font-weight: 200;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.read-more-button_inverted:hover {
+  background-color: var(--mørkerød);
+  color: var(--lyserød);
+}
+
+/* Kategori sektioner */

@@ -1,0 +1,114 @@
+html {
+  scroll-behavior: smooth;
+  --lyserød: #f6e5e3;
+  --koral: #ce4942;
+  --mørkerød: #73140c;
+  --sort: #000000;
+}
+
+@font-face {
+  font-family: "Arsenica Trial", serif;
+  src: url("../fonts/ArsenicaTrial-Demibold.woff2") format("woff2"), url("../fonts/ArsenicaTrial-Demibold.ttf") format("ttf");
+}
+
+/* Navbar styling */
+.navbar {
+  background-color: var(--mørkerød);
+  color: var(--lyserød);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 40px;
+}
+.logo h1 {
+  font-size: 2em;
+  font-weight: 600;
+  font-family: "Arsenica Trial", serif;
+  font-style: italic;
+  color: var(--koral);
+  letter-spacing: 2px;
+  margin: 0;
+}
+.menu {
+  display: flex;
+  gap: 40px;
+  margin-left: auto;
+}
+.menu a {
+  font-size: 2em;
+  font-weight: 200;
+  font-family: "Futura PT", "Avenir", sans-serif;
+  font-style: normal;
+  color: var(--lyserød);
+  text-decoration: none;
+  font-size: 1.2em;
+  transition: color 0.3s;
+}
+.menu a:hover {
+  color: var(--koral);
+}
+.icons {
+  display: flex;
+  gap: 20px;
+}
+.icons a img {
+  color: var(--lyserød);
+  width: 24px;
+  height: 24px;
+  transition: color 0.3s;
+}
+/* .icons a:hover img {
+  color: var(--koral);
+} */
+
+/* Navbar styling */
+
+/* Footer styling */
+
+.footer {
+  background-color: var(--mørkerød);
+  color: var(--lyserød);
+  display: grid;
+  text-align: right;
+  grid-template-columns: 1fr 1fr 1fr;
+  padding: 40px;
+}
+
+.footer-column {
+  display: grid;
+  grid-column: 2;
+  gap: 20px;
+}
+.footer-column2 {
+  display: grid;
+  grid-column: 3;
+  gap: 20px;
+}
+
+.footer-column h3 .footer-column2 h3 {
+  font-style: italic;
+}
+.footer-column a,
+.footer-column p .footer-column2 p {
+  color: var(--lyserød);
+  text-decoration: none;
+  font-size: 1.1em;
+  font-family: "Futura", sans-serif;
+  font-weight: normal;
+}
+
+.footer-column a:hover .footer-column2 a:hover {
+  color: var(--koral);
+}
+.social-icons {
+  display: grid;
+  gap: 15px;
+  margin-top: 10px;
+}
+.social-icons img {
+  width: 24px;
+  height: 24px;
+  transition: filter 0.3s;
+}
+
+/* Footer styling */

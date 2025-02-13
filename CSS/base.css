@@ -1,0 +1,47 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+@font-face {
+  font-family: "Arsenica Trial", serif;
+  src: url("../fonts/ArsenicaTrial-Demibold.woff2") format("woff2"), url("../fonts/ArsenicaTrial-Demibold.ttf") format("ttf");
+}
+
+html {
+  scroll-behavior: smooth;
+  --lyserød: #f6e5e3;
+  --koral: #ce4942;
+  --mørkerød: #73140c;
+  --sort: #000000;
+}
+
+body {
+  background-color: var(--lyserød);
+}
+
+h1 {
+  font-size: 2em;
+  font-weight: 600;
+  font-family: "Arsenica Trial", serif;
+  font-style: italic;
+  letter-spacing: 2px;
+}
+
+h2 {
+  font-weight: bold;
+  font-family: "Bodoni 72 Oldstyle", "Playfair Display", "Times New Roman", Times, serif;
+  font-style: italic;
+}
+
+h3 {
+  font-weight: 200;
+  font-family: "Bodoni 72 Oldstyle", "Playfair Display", "Times New Roman", Times, serif;
+  font-style: italic;
+}
+
+p {
+  font-weight: 200;
+  font-family: "Futura PT", "Avenir", sans-serif;
+  font-style: normal;
+}

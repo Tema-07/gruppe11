@@ -20,19 +20,20 @@ html {
   width: 100%;
 }
 .box {
+  position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
   background-color: var(--koral);
   color: var(--lyserød);
-  font-size: 6em;
+  font-size: 8rem;
   font-weight: 600;
   font-family: "Arsenica Trial", serif;
   font-style: italic;
-
   transition: background-color 0.5s ease;
   overflow: hidden;
 }
+
 .box:nth-child(2) {
   background-color: var(--lyserød);
   background-image: url(../img/Glow_photo_hero.webp);
@@ -61,26 +62,6 @@ html {
   background-color: transparent;
 }
 
-.container {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
-  height: 500px;
-  width: 100%;
-}
-.box {
-  position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-color: var(--koral);
-  color: var(--lyserød);
-  font-size: 6em;
-  font-weight: 600;
-  font-family: "Arsenica Trial", serif;
-  font-style: italic;
-  transition: background-color 0.5s ease;
-  overflow: hidden;
-}
 .box:hover {
   background-color: transparent;
   color: var(--koral);
@@ -362,8 +343,8 @@ html {
 
 .read-more-button_inverted {
   background-color: transparent;
-  color: var(--mørkerød);
-  border: 1px solid var(--mørkerød);
+  color: var(--koral);
+  border: 1px solid var(--koral);
   padding: 10px 20px;
   font-size: 1.2em;
   cursor: pointer;
@@ -373,8 +354,52 @@ html {
 }
 
 .read-more-button_inverted:hover {
-  background-color: var(--mørkerød);
+  background-color: var(--koral);
   color: var(--lyserød);
 }
 
 /* Kategori sektioner */
+
+/* Instagram bar */
+
+.instagram-bar {
+  display: flex;
+  overflow: hidden;
+  white-space: nowrap;
+  background-color: var(--lyserød);
+  border-top: 1px solid var(--mørkerød);
+  border-bottom: 1px solid var(--mørkerød);
+  color: var(--mørkerød);
+  padding: 20px 0;
+  font-size: 1.5em;
+  font-family: "Bodoni 72 Oldstyle", serif;
+  font-style: italic;
+  position: relative;
+}
+
+.instagram-bar span {
+  font-family: "Futura PT", sans-serif;
+  font-weight: 200;
+}
+
+.instagram-bar span strong {
+  font-family: "Bodoni 72 Oldstyle", serif;
+}
+
+.instagram-bar a {
+  text-decoration: none;
+  color: inherit;
+  display: flex;
+  animation: scrollText 20s linear infinite;
+}
+
+@keyframes scrollText {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+
+/* Instagram bar */

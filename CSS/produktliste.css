@@ -1,0 +1,112 @@
+.productList {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+  max-width: 1200px;
+  margin: 40px auto;
+  padding: 10px;
+  background-color: var(--lyserød);
+}
+
+.smallProduct {
+  background-color: var(--lyserød);
+  text-align: center;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  border: 1px solid #ccc;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+.smallProduct:hover {
+  transform: translateY(-5px);
+}
+.smallProduct img {
+  background-color: white;
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  margin-bottom: 10px;
+}
+.smallProduct h3 {
+  font-style: italic;
+  color: var(--koral);
+  margin: 10px 0;
+}
+
+.smallProduct p {
+  color: var(--mørkerød);
+  margin: 5px 0;
+}
+.price {
+  font-weight: bold;
+  color: var(--mørkerød);
+}
+
+.onSale {
+  position: relative;
+}
+
+.onSale p.price {
+  color: var(--mørkerød);
+  font-weight: 400;
+}
+
+.discount {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background-color: red;
+  color: white;
+  padding: 5px;
+  font-weight: bold;
+  border-radius: 5px;
+}
+
+.product-link {
+  text-decoration: none;
+  color: inherit;
+}
+
+.soldOut {
+  position: relative;
+  opacity: 0.5;
+  pointer-events: none;
+}
+
+.soldOut::after {
+  content: "Udsolgt";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: black;
+  padding: 10px 15px;
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.saleLabel {
+  /* position: absolute; */
+  visibility: hidden;
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background-color: var(--mørkerød);
+  color: var(--lyserød);
+  padding: 5px 10px;
+  font-size: 0.9rem;
+  font-weight: bold;
+  border-radius: 3px;
+  text-align: center;
+}
+
+.isOnSale {
+  visibility: visible;
+}
+
+.product_container {
+  position: relative;
+}

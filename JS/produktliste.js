@@ -1,15 +1,30 @@
+const listContainer = document.querySelector(".productList");
+const mycategory = new URLSearchParams(window.location.search).get("category");
 
-  fetch('https://dummyjson.com/products/category/beauty')
+const categorySpan = document.querySelector(".categories");
+if (mycategory) {
+  categorySpan.textContent = mycategory;
+} else {
+  categorySpan.textContent = "Category Not Found";
+}
+
+fetch(`https://dummyjson.com/products/category/${mycategory}`)
   .then((response) => response.json())
-  .then((data) => showList(data.products));
+  .then((data) => showList(data.products))
+  .catch((error) => console.error('Error fetching products:', error));
 
 function showList(products) {
-  const listContainer = document.querySelector(".editors_pick");
+  const listContainer = document.querySelector(".productList");
+  if (!listContainer) {
+    console.error(".productList container not found");
+    return;
+  }
+
   let markup = "";
 
   products.forEach((product) => {
     markup += `
-      <a href="produkt.html?id=${product.id}" class="product-link" style="text-decoration: none; color: inherit;">
+      <a href="produkt.html?id=${product.id}" class="product-link">
         <article class="smallProduct ${product.discountPercentage ? "onSale" : ""} ${product.stock === 0 ? "soldOut" : ""}">
           <img src="${product.thumbnail}" alt="${product.title}">
           <h3>${product.title}</h3>

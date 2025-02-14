@@ -8,6 +8,7 @@ if (mycategory) {
   categorySpan.textContent = "Category Not Found";
 }
 
+
 fetch(`https://dummyjson.com/products/category/${mycategory}`)
   .then((response) => response.json())
   .then((data) => showList(data.products))
@@ -15,11 +16,6 @@ fetch(`https://dummyjson.com/products/category/${mycategory}`)
 
 function showList(products) {
   const listContainer = document.querySelector(".productList");
-  if (!listContainer) {
-    console.error(".productList container not found");
-    return;
-  }
-
   let markup = "";
 
   products.forEach((product) => {

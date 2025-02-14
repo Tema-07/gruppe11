@@ -87,26 +87,3 @@
   font-size: 1.2rem;
   font-weight: bold;
 }
-
-.saleLabel {
-  /* position: absolute; */
-  visibility: hidden;
-  position: absolute;
-  top: 10px;
-  left: 10px;
-  background-color: var(--mørkerød);
-  color: var(--lyserød);
-  padding: 5px 10px;
-  font-size: 0.9rem;
-  font-weight: bold;
-  border-radius: 3px;
-  text-align: center;
-}
-
-.isOnSale {
-  visibility: visible;
-}
-
-.product_container {
-  position: relative;
-}

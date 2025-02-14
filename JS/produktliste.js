@@ -1,5 +1,8 @@
+console.log("mit productliste js");
+
 const listContainer = document.querySelector(".productList");
 const mycategory = new URLSearchParams(window.location.search).get("category");
+console.log("categoruy er", mycategory);
 
 const categorySpan = document.querySelector(".categories");
 if (mycategory) {
@@ -11,14 +14,16 @@ if (mycategory) {
 
 fetch(`https://dummyjson.com/products/category/${mycategory}`)
   .then((response) => response.json())
-  .then((data) => showList(data.products))
-  .catch((error) => console.error('Error fetching products:', error));
+  .then((data) => showList(data.products));
+  //.catch((error) => console.error('Error fetching products:', error));
 
 function showList(products) {
-  const listContainer = document.querySelector(".productList");
+    console.log("mit showList virker");
+
   let markup = "";
 
   products.forEach((product) => {
+    console.log("foreach  kører");
     markup += `
       <a href="produkt.html?id=${product.id}" class="product-link">
         <article class="smallProduct ${product.discountPercentage ? "onSale" : ""} ${product.stock === 0 ? "soldOut" : ""}">
@@ -40,7 +45,8 @@ function showList(products) {
           }
         </article>
       </a>`;
+   
   });
-
+  console.log("min markup er",markup);
   listContainer.innerHTML = markup;
 }

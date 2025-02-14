@@ -29,6 +29,10 @@ html {
   letter-spacing: 2px;
   margin: 0;
 }
+.logo a {
+  text-decoration: none;
+}
+
 .menu {
   display: flex;
   gap: 40px;

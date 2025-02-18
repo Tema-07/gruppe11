@@ -1,6 +1,7 @@
 console.log("mit productliste js");
 
 const listContainer = document.querySelector(".productList");
+const selectElement = document.querySelector("#selectElement");
 const mycategory = new URLSearchParams(window.location.search).get("category");
 console.log("category er", mycategory);
 
@@ -11,12 +12,25 @@ if (mycategory) {
   categorySpan.textContent = "Category Not Found";
 }
 
-fetch(`https://dummyjson.com/products/category/${mycategory}`)
+function showProducts(event) {
+  fetch(`https://dummyjson.com/products/category/${mycategory}`)
   .then((response) => response.json())
   .then((data) => {
-    let products = data.products;
-
-    let markup = products
+    let markup = data.products.filter((product) => {
+      if (event) {
+        if (event.target.value == "discount") {
+          return product.discount;
+        } else if(event.target.value == "soldout"){
+          return product.soldout;
+        } else if(event.target.value == "discontNotSoldout"){
+          return product.discount && !product.soldout;
+        } else {
+          return true;
+        }
+      }else {
+        return true;
+      }
+    })
       .map((product) => {
         return `
         <a href="produkt.html?id=${product.id}" class="product-link">
@@ -46,6 +60,13 @@ fetch(`https://dummyjson.com/products/category/${mycategory}`)
 
     listContainer.innerHTML = markup;
   })
+}
+
+selectElement.addEventListener("change", showProducts);
+
+showProducts();
+
+
 
 
 

@@ -8,3 +8,8 @@
 // function minfunktion(){
 //     console.log("brugeren har klikket på heading elementet");
 // }
+
+
+function toggleMenu() {
+    document.querySelector(".menu").classList.toggle("active");
+  }

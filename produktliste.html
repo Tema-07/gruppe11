@@ -10,31 +10,47 @@
     <link rel="stylesheet" href="./CSS/produktliste.css">
     <!-- <script src="./JS/index.js" defer></script> -->
     <script src="./JS/produktliste.js" defer></script>
+    <script src="./JS/base.js" defer></script>
 
 </head>
 
 <body>
     <header class="navbar">
         <div class="logo">
-            <a href="index.html"><h1>GLOW</h1></a>
+          <a href="index.html"><h1>GLOW</h1></a>
         </div>
-        <div class="menu">
-            <a href="./produktlist.html?category=beauty">Makeup</a>
-            <a href="./produktlist.html?category=skin-care">Skincare</a>
-            <a href="./produktlist.html?category=fragrance">Fragrance</a>
-            <a href="./produktlist.html?category=about">About</a>
-            <a href="./produktlist.html?category=contact">Contact</a>
+        <div class="burger-menu" onclick="toggleMenu()">☰</div>
+  
+        <nav class="menu">
+            <a href="./produktliste.html?category=beauty">Makeup</a>
+            <a href="./produktliste.html?category=skin-care">Skincare</a>
+            <a href="./produktliste.html?category=fragrances">Fragrance</a>
+            <a href="#">About</a>
+            <a href="#">Contact</a>
             <div class="icons">
-                <a href="#"><img src="./svg/search.svg" alt="search"></a>
-                <a href="#"><img src="./svg/like.svg" alt="like"></a>
-                <a href="#"><img src="./svg/shopping_cart.svg" alt="cart"></a>
-            </div>
-        </div>
-    </header>
+                <a href="#"><img src="./svg/search.svg" alt="search" /></a>
+                <a href="#"><img src="./svg/like.svg" alt="like" /></a>
+                <a href="#"><img src="./svg/shopping_cart.svg" alt="cart" /></a>
+              </div>
+        </nav>
+  
+       
+      </header>
+
+      <!-- brug nedenstående select element til filter -->
+
+    <!-- <select id="selectElement">
+        <option value="all">Vis alle produkter</option>
+        <option value="discont">Vis alle produkter på udsalg</option>
+        <option value="soldout">Vis alle produkter der er udsolgt</option>
+        <option value="discontNotSoldout">Vis alle produkter der er på udsalg men ikke udsolgt</option>
+    </select> -->
+
+    <!-- brug nedenstående select element til filter -->
     
-    <main>
-        <span class="categories"></span></h1>
-    
+    <main class="page-layout">
+        <div class="rotated-text categories"></div>
+
         <section class="productList"></section>
     </main>
 

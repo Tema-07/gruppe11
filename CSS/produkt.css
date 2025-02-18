@@ -1,0 +1,266 @@
+html {
+  scroll-behavior: smooth;
+  --lyserød: #f6e5e3;
+  --koral: #ce4942;
+  --mørkerød: #73140c;
+  --sort: #000000;
+}
+
+@font-face {
+  font-family: "Arsenica Trial", serif;
+  src: url("../fonts/ArsenicaTrial-Demibold.woff2") format("woff2"), url("../fonts/ArsenicaTrial-Demibold.ttf") format("ttf");
+}
+
+/* Sti */
+.breadcrumb-nav {
+  margin: 20px 0;
+  font-family: "Futura PT", "Avenir", sans-serif;
+  font-size: 1rem;
+  color: var(--mørkerød);
+  padding: 20px 40px;
+}
+
+.breadcrumb-nav a {
+  text-decoration: none;
+  color: var(--koral);
+  margin-right: 5px;
+  transition: color 0.3s ease;
+}
+
+.breadcrumb-nav a:hover {
+  color: var(--mørkerød);
+}
+
+.breadcrumb-nav span {
+  color: var(--mørkerød);
+  margin-left: 5px;
+}
+/* Sti */
+
+/* Review cards */
+
+.customer_reviews {
+  margin-top: 40px;
+  padding: 20px;
+  /* background-color: #fbeeee; */
+  text-align: center;
+}
+
+.review-title {
+  font-family: "Bodoni 72 Oldstyle", "Playfair Display", "Times New Roman", Times, serif;
+  font-style: italic;
+  color: var(--koral);
+  font-style: italic;
+  font-size: 2rem;
+  margin-bottom: 20px;
+  border-bottom: 1px solid var(--koral);
+  padding-bottom: 10px;
+}
+
+.reviews-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.review-card {
+  padding: 20px;
+  color: var(--mørkerød);
+}
+
+.review-date {
+  font-size: 0.9rem;
+  color: var(--koral);
+}
+
+.review-name {
+  font-size: 1.1rem;
+  color: var(--mørkerød);
+}
+
+.review-rating {
+  font-size: 1.1rem;
+  margin: 5px 0;
+}
+
+.review-comment {
+  font-size: 1rem;
+  line-height: 1.5;
+  margin-top: 10px;
+}
+
+/* Review cards */
+
+/* Mobilefirst styling */
+
+.product_container {
+  display: grid;
+  grid-template-columns: 1fr, 1fr;
+  gap: 20px;
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+  align-items: center;
+  position: relative;
+}
+
+.product_image img {
+  width: 100%;
+  max-width: 400px;
+  height: auto;
+  background-color: white;
+}
+
+.product_info {
+  text-align: center;
+  font-family: "Futura PT", "Avenir", sans-serif;
+  color: var(--mørkerød);
+  padding: 0 20px;
+}
+
+.product_info .brandname {
+  font-size: 1.2rem;
+  color: var(--mørkerød);
+  margin-bottom: 10px;
+}
+
+.product_info .productdisplayname2 {
+  font-family: "Bodoni 72 Oldstyle", "Playfair Display", "Times New Roman", Times, serif;
+  font-style: italic;
+  font-size: 2.5rem;
+  color: var(--koral);
+  margin-bottom: 20px;
+}
+
+.product_info .category {
+  font-size: 1.1rem;
+  color: var(--mørkerød);
+  margin: 5px 0;
+}
+
+.product_info .description {
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-bottom: 20px;
+  color: var(--mørkerød);
+}
+
+.product_info .stock {
+  font-size: 1rem;
+  margin-bottom: 5px;
+}
+
+.product_info .rating {
+  font-size: 1rem;
+  margin-bottom: 20px;
+}
+
+/* Sidebar med pris og købsknap */
+.price_bar {
+  text-align: center;
+  width: 100%;
+  margin-top: 20px;
+}
+
+.price_bar .price {
+  font-size: 2rem;
+  margin-bottom: 10px;
+  color: var(--koral);
+  font-family: "Futura PT", "Avenir", serif;
+  font-style: normal;
+  font-weight: 200;
+}
+
+.price_bar button {
+  padding: 15px;
+  font-size: 1.2rem;
+  border: none;
+  background-color: var(--koral);
+  color: var(--lyserød);
+  cursor: pointer;
+  width: 100%;
+  transition: background-color 0.3s ease;
+}
+.price_bar button:hover {
+  background-color: var(--lyserød);
+  color: var(--koral);
+  border: 1px solid var(--koral);
+}
+
+/* Rabatmærkat */
+.saleLabel {
+  visibility: hidden;
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  background-color: var(--koral);
+  color: var(--lyserød);
+  padding: 5px 10px;
+  font-size: 1rem;
+}
+
+.isOnSale {
+  visibility: visible;
+}
+
+/* Desktop layout aktiveres ved skærmbredde > 700px */
+@media (min-width: 700px) {
+  .product_container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    padding: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+    align-items: flex-start;
+    position: relative;
+  }
+
+  .product_info {
+    text-align: left;
+    padding: 0;
+  }
+
+  .price_bar {
+    text-align: left;
+    width: 100%;
+    margin-top: 0;
+  }
+
+  .product_image img {
+    max-width: 450px;
+  }
+
+  /* Review cards */
+  .customer_reviews {
+    /* background-color: #fbeeee; */
+    text-align: left;
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    margin-bottom: 20px;
+  }
+
+  .review-title {
+    font-family: "Bodoni 72 Oldstyle", "Playfair Display", "Times New Roman", Times, serif;
+    font-style: italic;
+    color: var(--koral);
+    font-style: italic;
+    font-size: 3rem;
+    margin-bottom: 20px;
+    border-bottom: 1px solid var(--koral);
+    padding-bottom: 10px;
+  }
+
+  .reviews-list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .review-card {
+    padding: 20px;
+    color: var(--mørkerød);
+    /* border-bottom: 1px solid var(--koral); */
+  }
+}

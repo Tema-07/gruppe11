@@ -9,26 +9,33 @@
     <link rel="stylesheet" href="./CSS/index.css">
     <script src="./JS/base.js" defer></script>
     <script src="./JS/index.js" defer></script>
+    <script src="./JS/navbar.js" defer></script>
+    <script src="./JS/base.js" defer></script>
 </head>
 
 <body>
+
     <header class="navbar">
         <div class="logo">
-            <a href="index.html"><h1>GLOW</h1></a>
+          <a href="index.html"><h1>GLOW</h1></a>
         </div>
-        <div class="menu">
-            <a href="#">Makeup</a>
-            <a href="#">Skincare</a>
-            <a href="#">Fragrance</a>
+        <div class="burger-menu" onclick="toggleMenu()">☰</div>
+  
+        <nav class="menu">
+            <a href="./produktliste.html?category=beauty">Makeup</a>
+            <a href="./produktliste.html?category=skin-care">Skincare</a>
+            <a href="./produktliste.html?category=fragrances">Fragrance</a>
             <a href="#">About</a>
             <a href="#">Contact</a>
             <div class="icons">
-                <a href="#"><img src="./svg/search.svg" alt="search"></a>
-                <a href="#"><img src="./svg/like.svg" alt="like"></a>
-                <a href="#"><img src="./svg/shopping_cart.svg" alt="cart"></a>
-            </div>
-        </div>
-    </header>
+                <a href="#"><img src="./svg/search.svg" alt="search" /></a>
+                <a href="#"><img src="./svg/like.svg" alt="like" /></a>
+                <a href="#"><img src="./svg/shopping_cart.svg" alt="cart" /></a>
+              </div>
+        </nav>
+  
+       
+      </header>
 
     <main>
         <section class="container">

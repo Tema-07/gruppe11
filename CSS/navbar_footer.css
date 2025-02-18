@@ -61,6 +61,58 @@ html {
   height: 24px;
   transition: color 0.3s;
 }
+/* Burgermenu styling */
+
+.burger-menu {
+  display: none;
+  font-size: 2em;
+  cursor: pointer;
+  z-index: 1001; /* Sørger for at den er øverst */
+}
+
+@media (max-width: 768px) {
+  .burger-menu {
+    display: block;
+    /* position: relative; */
+    z-index: 1002;
+  }
+
+  .menu {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    top: 70px;
+    left: 0;
+    width: 100%;
+    max-height: 90vh;
+    overflow: hidden;
+    background-color: #8b0000; /* Brug en synlig farve i stedet */
+    padding: 20px;
+    text-align: center;
+    gap: 20px;
+    z-index: 1001;
+  }
+
+  .menu a {
+    font-size: 1.5em;
+    color: #fff;
+    text-decoration: none;
+    padding: 10px;
+    transition: background-color 0.3s;
+  }
+
+  .menu a:hover {
+    background-color: #a52a2a;
+  }
+
+  .menu.active {
+    display: flex;
+  }
+}
+
+/* Burgermenu styling */
+
 /* .icons a:hover img {
   color: var(--koral);
 } */

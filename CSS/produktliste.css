@@ -31,28 +31,27 @@
 
 .filter{
   display: flex;
-  justify-content: flex-end;
-  margin-right: 11%;
+  justify-content: flex-start;
+  margin-left: 17%;
   margin-top: 3%;
 }
 
 .filter_dropdown{
   display: flex;
-  justify-content: flex-end;
-  margin-right: 11%;
+  justify-content: flex-start;
+  margin-left: 17%;
   padding-top: 1%;
 }
 
 #selectElement {
-  width: 250px; /* Gør dropdown bredere */
-  padding: 6px; /* Gør den mere rummelig */
+  width: 250px;
+  padding: 6px;
   border: 1px solid var(--koral);
-  border-radius: 8px; /* Afrunder hjørnerne */
-  background-color: var(--koral); /* Sikrer en pæn baggrund */
-  font-size: 20px; /* Gør teksten mere læselig */
+  background-color: var(--koral);
+  font-size: 20px;
   font-family: "Bodoni 72 Oldstyle", serif;
   color: var(--lyserød);
-  cursor: pointer; /* Ændrer musen til en pointer */
+  cursor: pointer;
 }
 
 /* Produktgitter */

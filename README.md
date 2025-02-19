@@ -13,6 +13,8 @@ Skriv derfor jeres fælles retningslinjer for punkterne herunder(tilføj gerne f
 
 Vi vil organisere vores projekt og struktur, ved at lave forskellige mapper til alt CSS, HTMl, JS og billeder. Vi vil lave en base.css, hvor alle de fonte, farver osv som er gennemgående for hele sitet bliver samlet på samme sted.
 
+Vores boilerplate hedder bare "main" i git.
+
 ## Navngivning:
 
 <!-- Beslutte hvordan i vil navngive filer og mapper for at sikre en ensartet struktur og undgå forvirring.
@@ -48,34 +50,63 @@ Når vi commiter vil vi sørge for at beskrive hvad der er blevet arbejdet på, 
 
 ## Kode:
 
-- Hvordan skriver i funktioner i JavaScript?(fx med function keyword eller som arrow functions)
-- Beslut hvilken CSS selector i benyttes til referener i henholdsvis CSS og JavaScript(fx. id'er til JavaScript og Classes til CSS)
-- Skal filer have korte forklaringer som kommentarer?
+<!-- - Hvordan skriver i funktioner i JavaScript?(fx med function keyword eller som arrow functions): -->
+
+Vi har skrevet funktioner flere forskellige steder og på to forskellige måder.
+Her er et eksempl:
+
+function addToBasket(id) {
+alert(`Produkt er blevet tilføjet til kurven!`);
+}
+Her bruges funktionen til at lave en alarm på skærmen når en knap er klikket.
+
+<!-- - Beslut hvilken CSS selector i benyttes til referener i henholdsvis CSS og JavaScript(fx. id'er til JavaScript og Classes til CSS) -->
+
+Vi har benyttet classes til CSS og id'er enektle steder til JS.
+
+<!--
+- Skal filer have korte forklaringer som kommentarer? -->
+
+Vi har forsøgt at bruge korte kommentarer så meget som muligt, især i CSS og JavaScript. Dette giver et meget bedre overblik over hvad der er hvad, samt gør det nemmere når at orienterer sig, når man skal samarbejde.
 
 # Funktionalitet
 
-Dette afsnit skal forklare hvad I konkret har arbejde med, for at udvikle websitet. Tænk over hvilke interaktioner brugeren kan foretage på sitet? Eller hvordan websitet håndterer og præsenterer data? Eksempler på funktionalitet, der kan beskrives:
+<!-- Dette afsnit skal forklare hvad I konkret har arbejde med, for at udvikle websitet. Tænk over hvilke interaktioner brugeren kan foretage på sitet? Eller hvordan websitet håndterer og præsenterer data? Eksempler på funktionalitet, der kan beskrives:
 
 - Hentning af produkter fra API.
 - Filtrering af produkter baseret på brugerens valg.
 - Dynamisk visning af produkter i HTML.
 
-Brug korte beskrivelser, som i eksemplerne herover
+Brug korte beskrivelser, som i eksemplerne herover -->
+
+1. Websitet henter produkter dynamisk fra dummyjson API, baseret på den valgte kategori.
+2. Brugeren kan filtre produkter via. klassik dropdownmenu (udsolgt, på tilbud, osv.)
+3. Produkter vises alle dynamisk med titel, billede, pris og rabat. Dette gør det nemt og overskueligt at opsætte websitet så hvert produkt ikke skal have en manueltskrevet html.
+4. Når brugeren klikker på produktet kommer de til en dynamisk hentet produktside.
+5. På denne side kan brugeren læse anmeldelser af produktet samt rating. Disse er hentet fra API'et.
+6. Øverst på alle sider findes en dynamisk opsat brødkrummesti.
+7. på produktside kan produkt tilføjes til kurv og brugeren får en besked på skærmen om at det er registreret.
 
 # API endpoints
 
-Dette afsnit skal liste de endpoints fra API'et i har benyttet:
+<!-- Dette afsnit skal liste de endpoints fra API'et i har benyttet: -->
 
 - (fx. https://dummyjson.com/products)
 
+https://dummyjson.com/products/category/{category}
+https://dummyjson.com/products/category/beauty
+https://dummyjson.com/products/category/skin-care
+https://dummyjson.com/products/category/fragrances
+https://dummyjson.com/products/{id}
+
 # Dokumentation af Funktion
 
-Dette afsnit skal beskrive en funktion I selv har udviklet. Det kunne eksempelvis være en funktion der generere en listen over fx. produkter:
+<!-- Dette afsnit skal beskrive en funktion I selv har udviklet. Det kunne eksempelvis være en funktion der generere en listen over fx. produkter:
 
 - Beskrivelse: Hvad gør funktionen? Hvordan spiller den sammen med resten af koden?
 - Parametre: Hvilke input forventes (fx en værdi fra en dropdown eller URL'en)?
 - Returnerer: Beskriv, om funktionen returnerer en værdi eller blot manipulerer DOM’en.
-- Eksempel på brug: Indsæt funktions-koden herunder(der hvor koden er i eksemplet) og vis, hvordan funktionen kaldes:
+- Eksempel på brug: Indsæt funktions-koden herunder(der hvor koden er i eksemplet) og vis, hvordan funktionen kaldes: -->
 
 ```javascript
 //funktionens kode:
@@ -85,3 +116,10 @@ function voresFunktion(sprog) {
 //hvordan funktionen kaldes:
 voresFunktion("JavaScript");
 ```
+
+selectElement.addEventListener("change", showProducts);
+
+funktionen kaldes når at et nyt filter bliver valgt.
+
+showProducts();
+den kaldes også når intet er valgt.

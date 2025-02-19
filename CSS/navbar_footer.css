@@ -115,6 +115,18 @@ html {
   .menu.active {
     display: flex;
   }
+
+  .grid_logo {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+  .logo {
+    grid-column: 2/3;
+  }
+
+  .burger-menu {
+    text-align: right;
+  }
 }
 
 /* Burgermenu styling */
@@ -127,7 +139,7 @@ html {
 
 /* Footer styling */
 
-.footer {
+footer {
   background-color: var(--mørkerød);
   color: var(--lyserød);
   display: grid;

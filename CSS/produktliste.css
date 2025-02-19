@@ -1,22 +1,20 @@
-/* .rotated-text {
-
-  font-family: "Bodoni 72 Oldstyle", serif;
-  font-size: 100px;
+.rotated-text {
+  font-weight: 600;
+  font-family: "Arsenica Trial", serif;
+  font-style: italic;
+  font-size: 5rem;
   color: var(--koral);
   text-transform: uppercase;
   letter-spacing: 5px;
-  align-self: center;
+  /*  align-self: center;
   transform: rotate(180deg);
-  writing-mode: vertical-rl;
+  writing-mode: vertical-rl; */
   left: -12%;
   top: -13%;
   text-align: right;
-  position: fixed;
-} */
+}
 
-
-
-.filter h2{
+.filter h2 {
   color: var(--koral);
   font-size: 2rem;
   font-family: "Bodoni 72 Oldstyle", serif;
@@ -24,7 +22,8 @@
   padding-top: 40px;
 }
 
-.filter h2, .filter_dropdown{
+.filter h2,
+.filter_dropdown {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   gap: 1rem;
@@ -34,7 +33,7 @@
   justify-content: center;
 }
 
-.filter_dropdown{
+.filter_dropdown {
   display: flex;
   justify-content: flex-start;
 }
@@ -144,3 +143,35 @@
 }
 
 /* Produktgitter */
+
+.produkt_grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding-left: 37px;
+  padding-right: 40px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+@media (width <= 850px) {
+  .produkt_grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+
+  .rotated-text {
+    text-align: center;
+    order: -1;
+    font-size: 4rem;
+  }
+}
+
+@media (width <= 500px) {
+  .rotated-text {
+    font-size: 3rem;
+  }
+}

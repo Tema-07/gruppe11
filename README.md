@@ -86,6 +86,13 @@ Brug korte beskrivelser, som i eksemplerne herover -->
 5. På denne side kan brugeren læse anmeldelser af produktet samt rating. Disse er hentet fra API'et.
 6. Øverst på alle sider findes en dynamisk opsat brødkrummesti.
 7. på produktside kan produkt tilføjes til kurv og brugeren får en besked på skærmen om at det er registreret.
+8. På alle produktsider kan brugeren tilgå en filter-funktion hvor de kan filtrere i deres søgning
+9. Brugeren kan vælge at se alle produkter eller:
+   - produkter på udsalg
+   - produkter som er udsolgte
+   - produkter som på er udsalg, men hvor de udsolgte produkter ikke medtages
+10. Filtreringen er implementeret via en <select> dropdown-menu.
+11. Dataen hentes fra API'et baseret på den valgte kategori.
 
 # API endpoints
 

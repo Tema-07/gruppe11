@@ -124,9 +124,39 @@ function voresFunktion(sprog) {
 voresFunktion("JavaScript");
 ```
 
-selectElement.addEventListener("change", showProducts);
+// her gør jeg sådan at den "poster" anmeldelsen til hjemmesiden ved brug af en funktion
+function addReview() {
+const reviewerName = document.getElementById("reviewer-name").value;
+const reviewRating = document.getElementById("review-rating").value;
+const reviewComment = document.getElementById("new-comment").value;
+// her henter jeg reviewerName, rating og kommentar via id
 
-funktionen kaldes når at et nyt filter bliver valgt.
+const reviewList = document.getElementById("reviews-list");
+// her bestemmer jeg hvor anmeldelserne skal vises
+const newReview = document.createElement("div");
+// her laver jeg en ny div hvori review-card skal placeres
+newReview.classList.add("review-card");
+// tilføjer klassen så der kan komme css på
+newReview.innerHTML = `    <p class="review-date"><strong>Date:</strong> ${new Date().toLocaleDateString()}</p>
+    <p class="review-name"><strong>Reviewer:</strong> ${reviewerName}</p>
+    <p class="review-rating"><strong>Rating:</strong> ${reviewRating} ⭐️</p>
+    <p class="review-comment"><strong>Comment:</strong> ${reviewComment}</p>
+ `;
 
-showProducts();
-den kaldes også når intet er valgt.
+// her laver et card der dynamisk henter dato, navn, rating og kommentar
+
+reviewList.append(newReview);
+// ved brug af append kan vi tilføje elementer eller tekst på én gang
+
+// her tilføjes den nye anmeldelse til listen over anmeldelser
+
+// Nulstil inputfelterne
+document.getElementById("reviewer-name").value = "";
+document.getElementById("review-rating").value = "5";
+document.getElementById("new-comment").value = "";
+}
+// her nulstilles imputfelterne så man kan skrive et nyt review
+
+// her har jeg en alarm, der tilføjer produkt til kurv
+function addToBasket(id) {
+a

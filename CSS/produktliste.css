@@ -17,8 +17,8 @@
 
 .breadcrumb-nav {
   margin: 20px 0;
-  font-family: "Futura PT", "Avenir", sans-serif;
-  font-size: 1rem;
+  font-family: "futura-pt", "Avenir", sans-serif;
+  font-size: 1.2rem;
   color: var(--mørkerød);
   padding: 20px 40px;
 }

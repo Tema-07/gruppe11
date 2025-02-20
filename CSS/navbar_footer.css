@@ -166,8 +166,8 @@ footer {
   color: var(--lyserød);
   text-decoration: none;
   font-size: 1.1em;
-  font-family: "Futura", sans-serif;
-  font-weight: normal;
+  font-family: "futura-pt", sans-serif;
+  font-weight: 200;
 }
 
 .footer-column a:hover .footer-column2 a:hover {

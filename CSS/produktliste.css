@@ -121,12 +121,10 @@
 .card h3 {
   font-style: italic;
   color: var(--koral);
-  margin: 10px 0;
 }
 
 .card p {
   color: var(--mørkerød);
-  margin: 5px 0;
 }
 .price {
   font-weight: bold;

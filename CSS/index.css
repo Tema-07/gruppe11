@@ -315,11 +315,11 @@ html {
   background-color: var(--lyserød);
   text-align: center;
   padding: 20px;
-  /* min-height: 500px; */
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  align-items: center;
+  border: 1px solid var(--koral);
+  transition: transform 0.3s ease;
 }
 .smallProduct img {
   background-color: white;
@@ -505,6 +505,19 @@ html {
   color: var(--lyserød);
 }
 
+/* Footer img */
+.footer_img {
+  width: 100%;
+  overflow: hidden;
+}
+
+.footer_img img {
+  width: 100%;
+  max-height: 200px;
+  object-fit: cover;
+  display: block;
+}
+/* Footer img */
 @media (width >= 750px) {
   .left_section {
     display: grid;

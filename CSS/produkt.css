@@ -127,6 +127,9 @@ html {
 }
 
 .product_info .brandname {
+  font-family: "futura-pt";
+  font-weight: 200;
+  font-style: normal;
   font-size: 1.2rem;
   color: var(--mørkerød);
   margin-bottom: 10px;
@@ -144,6 +147,9 @@ html {
   font-size: 1.1rem;
   color: var(--mørkerød);
   margin: 5px 0;
+  font-family: "futura-pt";
+  font-weight: 200;
+  font-style: normal;
 }
 
 .product_info .description {
@@ -151,16 +157,25 @@ html {
   line-height: 1.6;
   margin-bottom: 20px;
   color: var(--mørkerød);
+  font-family: "futura-pt";
+  font-weight: 200;
+  font-style: normal;
 }
 
 .product_info .stock {
   font-size: 1rem;
   margin-bottom: 5px;
+  font-family: "futura-pt";
+  font-weight: 200;
+  font-style: normal;
 }
 
 .product_info .rating {
   font-size: 1rem;
   margin-bottom: 20px;
+  font-family: "futura-pt";
+  font-weight: 200;
+  font-style: normal;
 }
 
 /* Sidebar med pris og købsknap */

@@ -74,6 +74,9 @@ html {
 }
 
 .review-name {
+  font-family: "futura-pt";
+  font-weight: 200;
+  font-style: normal;
   font-size: 1.1rem;
   color: var(--mørkerød);
 }
@@ -84,6 +87,9 @@ html {
 }
 
 .review-comment {
+  font-family: "futura-pt";
+  font-weight: 200;
+  font-style: normal;
   font-size: 1rem;
   line-height: 1.5;
   margin-top: 10px;
@@ -114,6 +120,8 @@ html {
 .product_info {
   text-align: center;
   font-family: "futura-pt", "Avenir", sans-serif;
+  font-weight: 200;
+  font-style: normal;
   color: var(--mørkerød);
   padding: 0 20px;
 }
@@ -124,7 +132,7 @@ html {
   margin-bottom: 10px;
 }
 
-.product_info .productdisplayname2 {
+.productdisplayname2 {
   font-family: "Bodoni 72 Oldstyle", "Playfair Display", "Times New Roman", Times, serif;
   font-style: italic;
   font-size: 2.5rem;

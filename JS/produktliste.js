@@ -2,6 +2,8 @@ console.log("mit productliste js");
 
 const listContainer = document.querySelector(".productList");
 const selectElement = document.querySelector("#selectElement");
+const breadcrumbContainer = document.querySelector(".breadcrumb");
+
 const mycategory = new URLSearchParams(window.location.search).get("category");
 console.log("category er", mycategory);
 
@@ -16,6 +18,18 @@ function showProducts(event) {
   fetch(`https://dummyjson.com/products/category/${mycategory}`)
   .then((response) => response.json())
   .then((data) => {
+
+    if (breadcrumbContainer) {
+        breadcrumbContainer.innerHTML = `
+          <nav class="breadcrumb-nav">
+            <a href="index.html">Forside</a> /
+            <span>${mycategory}</span>
+          </nav>
+        `;
+    }
+    
+    
+
     let markup = data.products.filter((product) => {
       if (event) {
         if (event.target.value == "discount") {
@@ -34,7 +48,7 @@ function showProducts(event) {
       .map((product) => {
         return `
         <a href="produkt.html?id=${product.id}" class="product-link">
-        <div class"productList">
+        <div class="productList">
         <article class="card ${product.discountPercentage ? "onSale" : ""} ${product.stock === 0 ? "soldOut" : ""}">
           <img src="${product.thumbnail}" alt="${product.title}">
           <h3>${product.title}</h3>

@@ -215,16 +215,20 @@ html {
   border: 1px solid var(--koral);
 }
 
-/* Rabatmærkat */
+/* Rabatmærkat vbjlghi*/
 .saleLabel {
   visibility: hidden;
   position: absolute;
-  top: 20px;
-  left: 20px;
-  background-color: var(--koral);
+  font-family: "futura-pt", serif;
+  font-weight: 200;
+  font-style: normal;
+  top: 25px;
+  left: 10px;
+  background-color: var(--mørkerød);
   color: var(--lyserød);
   padding: 5px 10px;
-  font-size: 1rem;
+  font-size: 0.9rem;
+  text-align: center;
 }
 
 .isOnSale {

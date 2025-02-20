@@ -68,6 +68,11 @@ html {
   color: var(--mørkerød);
 }
 
+.review-card:nth-child(3) {
+  border-bottom: 1px solid var(--koral);
+  padding-bottom: 50px;
+}
+
 .review-date {
   font-size: 0.9rem;
   color: var(--koral);
@@ -226,6 +231,93 @@ html {
   visibility: visible;
 }
 
+/* styling af kommentarfelt */
+/* Styling af anmeldelsessektion */
+#comment-form {
+  background-color: var(--lyserød);
+  padding: 20px;
+  max-width: 600px;
+  /* margin: 20px auto; */
+}
+
+/* Overskrift styling */
+#comment-form h1 {
+  font-family: "Bodoni 72 Oldstyle", "Playfair Display", "Times New Roman", Times, serif;
+  font-style: italic;
+  color: var(--koral);
+  font-style: italic;
+  font-size: 2rem;
+  text-align: left;
+  margin-bottom: 20px;
+}
+
+/* Labels styling */
+#comment-form label {
+  font-family: "futura-pt", sans-serif;
+  font-style: normal;
+  font-size: 16px;
+  font-weight: 200;
+  color: var(--mørkerød);
+  display: block;
+  margin-bottom: 5px;
+}
+
+/* Input-felter styling */
+#comment-form input,
+#comment-form select,
+#comment-form textarea {
+  width: 100%;
+  padding: 10px;
+  font-size: 14px;
+  font-family: "futura-pt", sans-serif;
+  font-weight: 200;
+  font-style: normal;
+  border: 1px solid var(--mørkerød);
+  margin-bottom: 15px;
+}
+
+/* Placeholder-farve */
+#comment-form input::placeholder,
+#comment-form textarea::placeholder {
+  color: #a37e7e;
+  font-style: italic;
+}
+
+/* Knappen styling */
+#btn-post {
+  background-color: var(--koral);
+  color: var(--lyserød);
+  font-size: 16px;
+  font-weight: 200;
+  font-family: "futura-pt", sans-serif;
+  font-style: normal;
+  border: none;
+  padding: 10px 15px;
+  cursor: pointer;
+  display: block;
+  /* width: 100%; */
+  transition: background-color 0.3s ease;
+}
+
+#btn-post:hover {
+  background-color: var(--lyserød);
+  border: 1px solid var(--mørkerød);
+  color: var(--mørkerød);
+}
+
+/* Footer img */
+.footer_img {
+  width: 100%;
+  overflow: hidden;
+}
+
+.footer_img img {
+  width: 100%;
+  max-height: 200px;
+  object-fit: cover;
+  display: block;
+}
+/* Footer img */
 /* Desktop layout aktiveres ved skærmbredde > 700px */
 @media (min-width: 700px) {
   .product_container {

@@ -8,8 +8,7 @@ html {
 
 @font-face {
   font-family: "Arsenica Trial", serif;
-  src: url("../fonts/ArsenicaTrial-Demibold.woff2") format("woff2"),
-    url("../fonts/ArsenicaTrial-Demibold.ttf") format("ttf");
+  src: url("../fonts/ArsenicaTrial-Demibold.woff2") format("woff2"), url("../fonts/ArsenicaTrial-Demibold.ttf") format("ttf");
 }
 
 /* Hero sektion */
@@ -296,8 +295,7 @@ html {
   text-align: center;
   margin: 20px;
   font-weight: bold;
-  font-family: "Bodoni 72 Oldstyle", "Playfair Display", "Times New Roman",
-    Times, serif;
+  font-family: "Bodoni 72 Oldstyle", "Playfair Display", "Times New Roman", Times, serif;
   font-style: italic;
   color: var(--koral);
   font-size: 2em;
@@ -480,7 +478,7 @@ html {
   padding: 10px 20px;
   font-size: 1.2em;
   cursor: pointer;
-  font-family: "Futura PT";
+  font-family: "futura-pt";
   font-weight: 200;
   transition: background-color 0.3s ease, color 0.3s ease;
 }
@@ -497,7 +495,7 @@ html {
   padding: 10px 20px;
   font-size: 1.2em;
   cursor: pointer;
-  font-family: "Futura PT";
+  font-family: "futura-pt";
   font-weight: 200;
   transition: background-color 0.3s ease, color 0.3s ease;
 }
@@ -634,7 +632,7 @@ html {
   padding: 10px 20px;
   font-size: 1.2em;
   cursor: pointer;
-  font-family: "Futura PT";
+  font-family: "futura-pt";
   font-weight: 200;
   transition: background-color 0.3s ease, color 0.3s ease;
 }
@@ -651,7 +649,7 @@ html {
   padding: 10px 20px;
   font-size: 1.2em;
   cursor: pointer;
-  font-family: "Futura PT";
+  font-family: "futura-pt";
   font-weight: 200;
   transition: background-color 0.3s ease, color 0.3s ease;
 }
@@ -681,7 +679,7 @@ html {
 }
 
 .instagram-bar span {
-  font-family: "Futura PT", sans-serif;
+  font-family: "futura-pt", sans-serif;
   font-weight: 200;
 }
 

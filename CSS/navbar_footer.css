@@ -8,8 +8,7 @@ html {
 
 @font-face {
   font-family: "Arsenica Trial", serif;
-  src: url("../fonts/ArsenicaTrial-Demibold.woff2") format("woff2"),
-    url("../fonts/ArsenicaTrial-Demibold.ttf") format("ttf");
+  src: url("../fonts/ArsenicaTrial-Demibold.woff2") format("woff2"), url("../fonts/ArsenicaTrial-Demibold.ttf") format("ttf");
 }
 
 /* Navbar styling */
@@ -47,7 +46,7 @@ html {
 .menu a {
   font-size: 2em;
   font-weight: 200;
-  font-family: "Futura PT", "Avenir", sans-serif;
+  font-family: "futura-pt", "Avenir", sans-serif;
   font-style: normal;
   color: var(--lyserød);
   text-decoration: none;

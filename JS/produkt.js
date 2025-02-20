@@ -15,7 +15,6 @@ const breadcrumbContainer = document.querySelector(".breadcrumb");
           <nav class="breadcrumb-nav">
             <a href="index.html">Forside</a> /
             <a href="produktliste.html?category=${data.category}">${data.category}</a> /
-            <span>${data.title}</span>
           </nav>
         `;
       }

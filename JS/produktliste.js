@@ -16,6 +16,17 @@ function showProducts(event) {
   fetch(`https://dummyjson.com/products/category/${mycategory}`)
   .then((response) => response.json())
   .then((data) => {
+
+    if (breadcrumbContainer) {
+        breadcrumbContainer.innerHTML = `
+          <nav class="breadcrumb-nav">
+            <a href="index.html">Forside</a> /
+            <a href="produktliste.html?category=${data.category}">${data.category}</a> /
+            <span>${data.title}</span>
+          </nav>
+        `;
+      }
+
     let markup = data.products.filter((product) => {
       if (event) {
         if (event.target.value == "discount") {
@@ -68,28 +79,4 @@ showProducts();
 
 
 
-
-
-// filter øvelser
-// const frugtoggroent = [	
-//     {navn: "æble", kategori: "frugt"},
-//     {navn: "melon", kategori: "frugt"},
-//     {navn: "peberfrugt", kategori: "groent"}
-
-// ];
-
-// const produkter =[	
-// "makeup",
-// "hovedtelefoner",
-// "mikrofon"
-// ];
-
-// produkter.map((produkt)=> {
-//     console.log("produkt", produkt);
-// });
-
-// frugtoggroent.map((element)=> element.kategori == "groent").map((element) =>{
-//     console.log(element);
-// })
-// filter øvelser
 

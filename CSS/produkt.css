@@ -374,10 +374,5 @@ html {
   .review-card {
     padding: 20px;
     color: var(--mørkerød);
-    /* border-bottom: 1px solid var(--koral); */
-  }
-
-  #comment-form h1 {
-    text-align: center;
   }
 }

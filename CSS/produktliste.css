@@ -71,8 +71,8 @@
   padding: 6px;
   border: 1px solid var(--koral);
   background-color: var(--koral);
-  font-size: 20px;
-  font-family: "Bodoni 72 Oldstyle", serif;
+  font-size: 15px;
+  font-family: "futura-pt", serif;
   color: var(--lyserød);
   cursor: pointer;
 }
@@ -86,23 +86,28 @@
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   gap: 1rem;
   max-width: 1200px;
-  margin: 40px auto;
   margin: auto;
   padding-top: 10px;
   padding-bottom: 30px;
   background-color: var(--lyserød);
 }
 
+.productList a {
+  display: grid;
+  grid-template-rows: subgrid;
+  grid-row: span 5;
+}
 .card {
+  display: grid;
+  grid-template-rows: subgrid;
+  grid-row: span 5;
   background-color: var(--lyserød);
   text-align: center;
   padding: 20px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
   border: 1px solid var(--koral);
   transition: transform 0.3s ease;
 }
+
 .card:hover {
   transform: translateY(-5px);
 }
@@ -138,14 +143,15 @@
 }
 
 .discount {
+  font-family: "futura-pt", serif;
   position: absolute;
   top: 10px;
   left: 10px;
-  background-color: red;
-  color: white;
-  padding: 5px;
-  font-weight: bold;
-  border-radius: 5px;
+  background-color: var(--mørkerød);
+  color: var(--lyserød);
+  padding: 5px 10px;
+  font-size: 0.9rem;
+  text-align: center;
 }
 
 .product-link {

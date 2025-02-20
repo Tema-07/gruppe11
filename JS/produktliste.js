@@ -48,7 +48,7 @@ function showProducts(event) {
       .map((product) => {
         return `
         <a href="produkt.html?id=${product.id}" class="product-link">
-        <div class="productList">
+    
         <article class="card ${product.discountPercentage ? "onSale" : ""} ${product.stock === 0 ? "soldOut" : ""}">
           <img src="${product.thumbnail}" alt="${product.title}">
           <h3>${product.title}</h3>
@@ -67,7 +67,7 @@ function showProducts(event) {
               : ""
           }
         </article>
-        </div>
+        
         </a>`;
       })
       .join("");

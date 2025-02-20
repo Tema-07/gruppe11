@@ -307,17 +307,23 @@ html {
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   gap: 1rem;
   max-width: 1200px;
-  margin: 40px auto;
-  padding: 10px;
+  margin: auto;
+  padding-top: 10px;
+  padding-bottom: 30px;
   background-color: var(--lyserød);
 }
+.editors_pick a {
+  display: grid;
+  grid-template-rows: subgrid;
+  grid-row: span 5;
+}
 .smallProduct {
+  display: grid;
+  grid-template-rows: subgrid;
+  grid-row: span 5;
   background-color: var(--lyserød);
   text-align: center;
   padding: 20px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
   border: 1px solid var(--koral);
   transition: transform 0.3s ease;
 }
@@ -354,7 +360,7 @@ html {
 
 /* Rediger rabat-badge til at vise procent */
 .onSale .discount {
-  font-family: "Baskerville Display BT", serif;
+  font-family: "futura-pt", serif;
   position: absolute;
   top: 10px;
   left: 10px;
